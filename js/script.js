@@ -65,7 +65,10 @@ var quotes = [
     year: '2014',
     tag: 'captain america'
   }
-]
+];
+
+// colors = red, blue, gree, yellow, purple, lt green, orange, dk blue, gray
+var colors = ['#c0392b', '#2980b9', '#16a085', '#f39c12', '#8e44ad', '#27ae60', '#d35400', '#2c3e50', '#7f8c8d'];
 
 // Create random number and return an object from quotes array
 function getRandomQuote() {
@@ -87,14 +90,20 @@ function getRandomQuote() {
    - Set the `innerHTML` of the `quote-box` div to the HTML string. 
 ***/
 
+// Generates a random background color from the color array
+function randomBGColor() {
+  var randomColor = Math.floor(Math.random() * colors.length);
+  document.body.style.backgroundColor = colors[randomColor];  
+}
+
+// Prints the randomly generated quote to the quote-box div
 function printQuote() {
+  randomBGColor();
   var quote = getRandomQuote();
   var htmlString = '';
   htmlString += '<p class="quote">' + quote.quote + '</p>';
   htmlString += '<p class="source">' + quote.character + '<span class="citation">' + quote.source + '</span><span class="year">' + quote.year + '</span></p>';
   document.getElementById('quote-box').innerHTML = htmlString;   
-  
-console.log(htmlString);
 }
 
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
