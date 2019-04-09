@@ -1,20 +1,78 @@
-/******************************************
-Treehouse FSJS Techdegree:
-project 1 - A Random Quote Generator
-******************************************/
-
 // Study guide for this project - https://drive.google.com/file/d/1s5grutGuQFwJcQP8bFwEI69Q8FCkGdDk/view?usp=sharing
 
-
-/*** 
-  Create the array of quote objects and name it `quotes`.
-  Add at least five quote objects to the `quotes` array.
-  Give each quote object a `quote` and `source` property.
-  Add the `citation` property to at least one object in the array.
-  Add the `year` property to at least one object in the array.
-  Use console.log() to log your array of quotes to the console.
-***/
-
+// Quotes array
+var quotes = [
+  {
+    quote: 'Whatever happens tomorrow you must promise me one thing. That you will stay who you are. Not a perfect soldier, but a good man.',
+    character: 'Dr. Abraham Erskine',
+    source: 'Captain America:  The First Avenger',
+    year: '2011',
+    tag: 'captain america'
+  },
+  {
+    quote: 'A wise man once asked, "Is it better to be feared or respected?" I say, is it too much to ask for both?',
+    character: 'Tony Stark',
+    source:  'Iron Man',
+    year: '2008',
+    tag: 'iron man'
+  },
+  {
+    quote: 'You are no match for the mighty Thor!',
+    character: 'Thor',
+    source: 'Thor',
+    year: '2011',
+    tag: 'thor'
+  },
+  {
+    quote: 'She\'s not alone.',
+    character: 'Black Widow',
+    source: 'Avengers:  Infinity War',
+    year: '2018',
+    tag: 'avengers'
+  },
+  {
+    quote: 'You can\'t destroy power. All you can do is to make sure that it\'s in the right hands.',
+    character: 'Dr. Hank Pym',
+    source: 'Ant Man',
+    year: '2015',
+    tag: 'ant man'
+  },
+  {
+    quote: 'Have you ever had someone pick your brain and play? Pull you out, stuff something else in. Do you know what it\s like to be unmade?',
+    character: 'Hawkeye',
+    source: 'The Avengers',
+    year: '2012',
+    tag: 'avengers'
+  },
+  {
+    quote: 'I know what it\'s like to lose. To feel so desperately that you\'re right, yet to fail nonetheless.',
+    character: 'Thanos',
+    source: 'Avengers: Infinity War',
+    year: '2018',
+    tag: 'avengers'
+  },
+  {
+    quote: 'We\'re in the endgame now.',
+    character: 'Doctor Strange',
+    source: 'Avengers:  Infinity War',
+    year: '2018',
+    tag: 'avengers'
+  },
+  {
+    quote: 'When you can do the things that I can, but you don\'t, and then the bad things happen, they happen because of you.',
+    character: 'Spiderman',
+    source: 'Spiderman:  Homecoming',
+    year: '2017',
+    tag: 'spiderman'
+  },
+  {
+    quote: 'This man declined the Nobel Peace Prize. He said peace wasn\'t an achievement, it was a responsibility. See, it\'s stuff like this that gives me trust issues.',
+    character: 'Nick Fury',
+    source: 'Captain America:  The Winter Soldier',
+    year: '2014',
+    tag: 'captain america'
+  }
+]
 
 
 
