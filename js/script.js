@@ -24,13 +24,6 @@ var quotes = [
     tag: 'thor'
   },
   {
-    quote: 'She\'s not alone.',
-    character: 'Black Widow',
-    source: 'Avengers:  Infinity War',
-    year: '2018',
-    tag: 'avengers'
-  },
-  {
     quote: 'You can\'t destroy power. All you can do is to make sure that it\'s in the right hands.',
     character: 'Dr. Hank Pym',
     source: 'Ant Man',
@@ -74,15 +67,11 @@ var quotes = [
   }
 ]
 
-
-
-/***
-  Create the `getRandomQuote` function to:
-   - Create a variable to store a random number 
-   - Cse the random number to `return` a random quote object from the `quotes` array.
-***/
-
-
+// Create random number and return an object from quotes array
+function getRandomQuote() {
+  var generateIndex = Math.floor(Math.random() * quotes.length); // Generate random # b/w 0 and length of quotes array
+  return quotes[generateIndex];
+}
 
 
 /***
@@ -108,7 +97,7 @@ var quotes = [
   comment.
 ***/
 
-document.getElementById('loadQuote').addEventListener("click", printQuote, false);
+// document.getElementById('loadQuote').addEventListener("click", printQuote, false);
 
 
 // Remember to delete the comments that came with this file, and replace them with your own code comments.
