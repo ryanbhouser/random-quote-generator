@@ -67,7 +67,7 @@ function getRandomQuote() {
   return quotes[generateIndex];
 }
 
-// Generates a random background color from the color array
+// Generates a random background color from the color array & changes the body's bg color
 function randomBGColor() {
   var randomColor = Math.floor(Math.random() * colors.length);
   document.body.style.backgroundColor = colors[randomColor];  
@@ -79,7 +79,7 @@ function printQuote() {
   var quote = getRandomQuote();
   var htmlString = '';
   htmlString += '<p class="quote">' + quote.quote + '</p>';
-  htmlString += '<p class="source">' + quote.source; '<span class="year">' + quote.year + '</span>';
+  htmlString += '<p class="source">' + quote.source;
 
   // checks if quote has a citation
   if (quote.citation) {
@@ -99,8 +99,11 @@ function printQuote() {
     htmlString += '<p class="tag">Tagged under: ' + quote.tag + '</p>';
   }
   // prints htmlString to quote-box
-  document.getElementById('quote-box').innerHTML = htmlString;   
+  document.getElementById('quote-box').innerHTML = htmlString;
 }
+
+// Automatically generates a new quote every 20 seconds
+window.setInterval(printQuote, 20000);
 
 // Ensures a random quote appears on page load
 printQuote();
