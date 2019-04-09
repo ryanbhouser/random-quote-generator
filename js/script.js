@@ -33,19 +33,16 @@ var quotes = [
     source: 'Hawkeye',
     citation: 'The Avengers',
     year: '2012',
-    // tag: 'avengers'
   },
   {
     quote: 'I know what it\'s like to lose. To feel so desperately that you\'re right, yet to fail nonetheless.',
     source: 'Thanos',
     citation: 'Avengers: Infinity War',
-    // year: '2018',
     tag: 'avengers'
   },
   {
     quote: 'We\'re in the endgame now.',
     source: 'Doctor Strange',
-    // citation: 'Avengers:  Infinity War',
     year: '2018',
     tag: 'avengers'
   },
@@ -54,14 +51,10 @@ var quotes = [
     source: 'Spiderman',
     citation: 'Spiderman:  Homecoming',
     year: '2017',
-    // tag: 'spiderman'
   },
   {
     quote: 'This man declined the Nobel Peace Prize. He said peace wasn\'t an achievement, it was a responsibility. See, it\'s stuff like this that gives me trust issues.',
-    source: 'Nick Fury',
-    // citation: 'Captain America:  The Winter Soldier',
-    // year: '2014',
-    // tag: 'captain america'
+    source: 'Nick Fury'
   }
 ];
 
