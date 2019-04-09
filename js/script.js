@@ -33,19 +33,19 @@ var quotes = [
     source: 'Hawkeye',
     citation: 'The Avengers',
     year: '2012',
-    tag: 'avengers'
+    // tag: 'avengers'
   },
   {
     quote: 'I know what it\'s like to lose. To feel so desperately that you\'re right, yet to fail nonetheless.',
     source: 'Thanos',
     citation: 'Avengers: Infinity War',
-    year: '2018',
+    // year: '2018',
     tag: 'avengers'
   },
   {
     quote: 'We\'re in the endgame now.',
     source: 'Doctor Strange',
-    citation: 'Avengers:  Infinity War',
+    // citation: 'Avengers:  Infinity War',
     year: '2018',
     tag: 'avengers'
   },
@@ -54,14 +54,14 @@ var quotes = [
     source: 'Spiderman',
     citation: 'Spiderman:  Homecoming',
     year: '2017',
-    tag: 'spiderman'
+    // tag: 'spiderman'
   },
   {
     quote: 'This man declined the Nobel Peace Prize. He said peace wasn\'t an achievement, it was a responsibility. See, it\'s stuff like this that gives me trust issues.',
     source: 'Nick Fury',
-    citation: 'Captain America:  The Winter Soldier',
-    year: '2014',
-    tag: 'captain america'
+    // citation: 'Captain America:  The Winter Soldier',
+    // year: '2014',
+    // tag: 'captain america'
   }
 ];
 
@@ -73,19 +73,6 @@ function getRandomQuote() {
   var generateIndex = Math.floor(Math.random() * quotes.length);
   return quotes[generateIndex];
 }
-
-/***
-  Create the `printQuote` function to: 
-   - Call the `getRandomQuote` function and assign it to a variable.
-   - Create a variable for the HTML string and set it equal to an empty string.
-   - Use the HTML template in the instructions or the markup in the index.html file, AND 
-     the random quote vairable to build your HTML string.
-   - Add the quote and source section to the HTML string.
-   - Use an if statement to check for the citation property before adding it to the HTML string.
-   - Use an if statement to check for the year property before adding it to the HTML string.
-   - Don't forget to close that final `p` tag.
-   - Set the `innerHTML` of the `quote-box` div to the HTML string. 
-***/
 
 // Generates a random background color from the color array
 function randomBGColor() {
@@ -99,8 +86,26 @@ function printQuote() {
   var quote = getRandomQuote();
   var htmlString = '';
   htmlString += '<p class="quote">' + quote.quote + '</p>';
-  htmlString += '<p class="source">' + quote.source + '<span class="citation">' + quote.citation + '</span><span class="year">' + quote.year + '</span></p>';
-  htmlString += '<p class="tag">Tagged under: ' + quote.tag + '</p>';
+  htmlString += '<p class="source">' + quote.source; '<span class="year">' + quote.year + '</span>';
+
+  // checks if quote has a citation
+  if (quote.citation) {
+    htmlString += '<span class="citation">' + quote.citation + '</span>';
+  }
+
+  // checks if quote has a year
+  if (quote.year) {
+    htmlString += '<span class="year">' + quote.year + '</span>';
+  }
+
+  // closes out the quote p tag
+  htmlString += '</p>'
+
+  // checks if quote has a tag
+  if (quote.tag) {
+    htmlString += '<p class="tag">Tagged under: ' + quote.tag + '</p>';
+  }
+  // prints htmlString to quote-box
   document.getElementById('quote-box').innerHTML = htmlString;   
 }
 
