@@ -71,6 +71,15 @@ body {
   font-style: normal;
 }
 
+.tag {
+  text-align: right;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  line-height: .1;
+  text-align: right;
+  margin-right: 7em;
+}
+
 #loadQuote {
   position: fixed;
   width: 12em;
