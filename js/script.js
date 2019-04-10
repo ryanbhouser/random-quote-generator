@@ -66,8 +66,7 @@ var timer = window.setInterval(printQuote, 10000);
 
 // Create random number and return an object from quotes array
 function getRandomQuote() {
-  var generateIndex = Math.floor(Math.random() * quotes.length);
-  return quotes[generateIndex];
+  return quotes[Math.floor(Math.random() * quotes.length)];
 }
 
 // Generates a random background color from the color array & changes the body's bg color
