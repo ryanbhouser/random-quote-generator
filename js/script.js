@@ -110,6 +110,7 @@ function printQuote() {
 }
 
 // resets and restarts the timer if the button is clicked
+// with help from "aroth" on StackOverflor (https://stackoverflow.com/questions/6889598/reset-settimeout-every-button-click)
 function resetTimer() {  
   clearTimeout(timer);
   timer = setTimeout(printQuote, 10000);
