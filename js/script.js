@@ -61,6 +61,9 @@ var quotes = [
 // Background colors = red, blue, gree, yellow, purple, lt green, orange, dk blue, gray
 var colors = ['#c0392b', '#2980b9', '#16a085', '#f39c12', '#8e44ad', '#27ae60', '#d35400', '#2c3e50', '#7f8c8d'];
 
+// Automatically generates a new quote every 20 seconds
+var timer = window.setInterval(printQuote, 10000);
+
 // Create random number and return an object from quotes array
 function getRandomQuote() {
   var generateIndex = Math.floor(Math.random() * quotes.length);
@@ -98,15 +101,22 @@ function printQuote() {
   if (quote.tag) {
     htmlString += '<p class="tag">Tagged under: ' + quote.tag + '</p>';
   }
+
   // prints htmlString to quote-box
   document.getElementById('quote-box').innerHTML = htmlString;
+
+  // calls function to reset the timer
+  resetTimer();
 }
 
-// Automatically generates a new quote every 20 seconds
-window.setInterval(printQuote, 20000);
+// resets and restarts the timer if the button is clicked
+function resetTimer() {  
+  clearTimeout(timer);
+  timer = setTimeout(printQuote, 10000);
+}
 
 // Ensures a random quote appears on page load
 printQuote();
 
-// Generates a new random quote and displays on screen
+// Generates a new random quote and displays on screen by clicking the button
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
