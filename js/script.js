@@ -71,8 +71,7 @@ function getRandomQuote() {
 
 // Generates a random background color from the color array & changes the body's bg color
 function randomBGColor() {
-  var randomColor = Math.floor(Math.random() * colors.length);
-  document.body.style.backgroundColor = colors[randomColor];  
+  document.body.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];  
 }
 
 // Prints the randomly generated quote to the quote-box div
